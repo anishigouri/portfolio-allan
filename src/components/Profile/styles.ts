@@ -1,5 +1,4 @@
 import { styled } from '@/styles'
-import background from '@/assets/background-profile.jpeg'
 
 export const ProfileStyled = styled('main', {
   display: 'flex',
@@ -9,10 +8,6 @@ export const ProfileStyled = styled('main', {
   gap: '2rem',
 
   height: 'calc(100vh - 7rem)',
-
-  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(${background.src})`,
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
 
   img: {
     borderRadius: 100,

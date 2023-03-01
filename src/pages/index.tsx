@@ -1,5 +1,7 @@
+import { Contact } from '@/components/Contacts'
 import { Header } from '@/components/Header'
 import { Profile } from '@/components/Profile'
+import { Skill } from '@/components/Skill'
 import { api } from '@/lib/axios'
 import { IProfile } from '@/types/profile'
 import { differenceInYears } from 'date-fns'
@@ -21,6 +23,8 @@ export default function Home({ profile }: IHomeProps) {
       </Head>
       <Header />
       <Profile profile={profile} />
+      <Skill />
+      <Contact />
     </>
   )
 }
