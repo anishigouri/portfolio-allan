@@ -15,7 +15,7 @@ export const ContactStyled = styled('div', {
   gap: '1rem',
 })
 
-export const ContactItemStyled = styled('div', {
+export const ContactItemStyled = styled('a', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -23,6 +23,7 @@ export const ContactItemStyled = styled('div', {
   padding: '1rem',
   borderRadius: 8,
   transition: '0.3s',
+  color: '#fff',
 
   '&:hover': {
     cursor: 'pointer',

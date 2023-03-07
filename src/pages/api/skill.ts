@@ -72,6 +72,10 @@ export default function handler(
       icon: 'SiNuxtdotjs',
     },
     {
+      description: 'Design System',
+      icon: 'SiStorybook',
+    },
+    {
       description: 'Storybook',
       icon: 'SiStorybook',
     },
