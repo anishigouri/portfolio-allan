@@ -8,7 +8,7 @@ import { BsGithub, BsLinkedin, BsWhatsapp } from 'react-icons/bs'
 
 export function Contact() {
   return (
-    <ContactContainerStyled>
+    <ContactContainerStyled id="contact">
       <h1>Contatos</h1>
       <ContactStyled>
         <ContactItemStyled href="mailto:allanfurlani@gmail.com">

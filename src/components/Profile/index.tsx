@@ -10,7 +10,7 @@ interface IProfileProps {
 export function Profile({ profile }: IProfileProps) {
   const [age, setAge] = useState<number>(18)
   return (
-    <ProfileStyled>
+    <ProfileStyled id="aboutme">
       <Image src={profile.avatarUrl} width={200} height={200} alt="Allan" />
       <DescriptionStyled>
         <h1>{profile.name}</h1>

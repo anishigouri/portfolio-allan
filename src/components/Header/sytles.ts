@@ -26,6 +26,11 @@ export const NavStyled = styled('nav', {
         borderBottom: '3px solid $blue300',
         color: '$gray300',
       },
+
+      a: {
+        color: '#fff',
+        textDecoration: 'none',
+      },
     },
   },
 })

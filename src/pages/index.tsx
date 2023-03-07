@@ -1,4 +1,5 @@
 import { Contact } from '@/components/Contacts'
+import { Experience } from '@/components/Experience'
 import { Header } from '@/components/Header'
 import { Profile } from '@/components/Profile'
 import { Skill } from '@/components/Skill'
@@ -24,6 +25,7 @@ export default function Home({ profile }: IHomeProps) {
       <Header />
       <Profile profile={profile} />
       <Skill />
+      <Experience />
       <Contact />
     </>
   )

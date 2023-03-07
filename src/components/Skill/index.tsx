@@ -22,7 +22,7 @@ export function Skill() {
   }
 
   return (
-    <SkillContainerStyled>
+    <SkillContainerStyled id="skills">
       <h1>Habilidades</h1>
       <SkillItemsStyled>
         {skills?.map((skill) => (

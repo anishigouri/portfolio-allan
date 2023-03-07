@@ -8,9 +8,18 @@ export function Header() {
       <Image src={logo} width={80} height={80} alt="" />
       <NavStyled>
         <ul>
-          <li>Sobre mim</li>
-          <li>Experiências</li>
-          <li>Educação</li>
+          <li>
+            <a href="#aboutme">Sobre mim</a>
+          </li>
+          <li>
+            <a href="#skills">Habilidades</a>
+          </li>
+          <li>
+            <a href="#experience">Experiências</a>
+          </li>
+          <li>
+            <a href="#contact">Contato</a>
+          </li>
         </ul>
       </NavStyled>
     </HeaderStyled>
