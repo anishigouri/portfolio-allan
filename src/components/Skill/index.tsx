@@ -1,16 +1,32 @@
 import { ISkill } from '@/pages/api/skill'
+import { motion, Variants } from 'framer-motion'
+import { useRef } from 'react'
 import * as ReactIcons from 'react-icons/si'
 import useSwr from 'swr'
 import {
-  SkillItemStyled,
-  SkillItemsStyled,
   SkillContainerStyled,
+  SkillItemsStyled,
+  SkillItemStyled,
 } from './styles'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 type GetIconProps = {
   icon: keyof typeof ReactIcons
+}
+
+const skillVariants: Variants = {
+  offscreen: {
+    y: 300,
+  },
+  onscreen: {
+    y: 50,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 0.6,
+    },
+  },
 }
 
 export function Skill() {
@@ -26,10 +42,20 @@ export function Skill() {
       <h1>Habilidades</h1>
       <SkillItemsStyled>
         {skills?.map((skill) => (
-          <SkillItemStyled key={skill.description}>
-            {getIcon({ icon: skill.icon })}
-            <span>{skill.description}</span>
-          </SkillItemStyled>
+          <motion.div
+            key={skill.description}
+            className="card-container"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+          >
+            <motion.div className="card" variants={skillVariants}>
+              <SkillItemStyled>
+                {getIcon({ icon: skill.icon })}
+                <span>{skill.description}</span>
+              </SkillItemStyled>
+            </motion.div>
+          </motion.div>
         ))}
       </SkillItemsStyled>
     </SkillContainerStyled>
