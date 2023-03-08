@@ -5,8 +5,8 @@ export const ExperienceContainerStyled = styled('section', {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column',
-  gap: '2rem',
-  margin: '5rem 0',
+  gap: '8rem',
+  margin: '10rem 0',
 })
 
 export const ExperienceStyled = styled('div', {
@@ -49,6 +49,10 @@ export const ExperienceItemSelectedStyled = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   gap: '1rem',
+
+  span: {
+    lineHeight: '2rem',
+  },
 })
 
 export const ExperienceItemSelectedLogoStyled = styled('div', {

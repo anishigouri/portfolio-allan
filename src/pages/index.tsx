@@ -41,7 +41,7 @@ export const getStaticProps: GetStaticProps = async () => {
     age,
     description: `Olá, tenho ${age} anos, sou formado em Ciência da Computação e sou
     desenvolvedor a aproximadamente 12 anos, fui fullstack durante 6 anos
-    e atualmente sou frontend.`,
+    e atualmente sou frontend. Tenho mais conhecimento com a biblioteca React e o Framework Vue. `,
     name: data.name,
     career: 'frontend developer',
   }

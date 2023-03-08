@@ -5,8 +5,8 @@ export const ContactContainerStyled = styled('footer', {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column',
-  gap: '2rem',
-  margin: '5rem 0',
+  gap: '8rem',
+  margin: '10rem 0',
 })
 
 export const ContactStyled = styled('div', {

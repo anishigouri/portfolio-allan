@@ -22,8 +22,8 @@ export default function handler(
   const experiences: IExperience[] = [
     {
       id: 1,
-      description:
-        'Responsável pela criação de novas ferramentas e manutenção das aplicações da empresa em React e AngularJS',
+      description: `Atualmente sou responsável pela manutenção e criação de novas funcionalidades das aplicações frontend da empresa.
+      Utilizamos as seguintes tecnologias: AngularJS, React, Typescript, NextJS, Redux, Vue, Vuex, Nuxt, Vuetify, CSS-in-JS, Storybook`,
       position: 'Frontend Developer',
       initDate: '11/2020',
       endDate: '',
@@ -35,9 +35,10 @@ export default function handler(
     },
     {
       id: 2,
-      description:
-        'Responsável pela criação de novas ferramentas e manutenção das aplicações da empresa em React e AngularJS',
-      position: 'Frontend Developer',
+      description: `Responsável pela manutenção das aplicações tanto no frontend quanto no backend.
+        
+        Utilizamos as seguintes tecnologias: React, Typescript, Redux, CSS-in-JS, Node, Express `,
+      position: 'Fullstack Developer',
       initDate: '05/2020',
       endDate: '11/2020',
       enterprise: {
@@ -48,8 +49,9 @@ export default function handler(
     },
     {
       id: 3,
-      description:
-        'Responsável pela criação de novas ferramentas e manutenção das aplicações da empresa em React e AngularJS',
+      description: `Responsável pela manutenção e criação de novas funcionalidades das aplicações da empresa.
+      
+      Utilizamos as seguintes tecnologias: Angular, Typescript, Node, NestJS, Oracle, Docker`,
       position: 'Fullstack Developer',
       initDate: '04/2019',
       endDate: '04/2020',
