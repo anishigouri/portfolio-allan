@@ -14,6 +14,10 @@ export const ContactStyled = styled(motion.div, {
   display: 'flex',
   alignItems: 'center',
   gap: '1rem',
+
+  '@xs': {
+    flexWrap: 'wrap',
+  },
 })
 
 export const ContactItemStyled = styled('a', {
@@ -25,6 +29,7 @@ export const ContactItemStyled = styled('a', {
   borderRadius: 8,
   transition: '0.3s',
   color: '#fff',
+  width: '100%',
 
   '&:hover': {
     cursor: 'pointer',

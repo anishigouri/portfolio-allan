@@ -20,6 +20,7 @@ export const SkillItemsStyled = styled('div', {
   marginTop: '2rem',
   display: 'flex',
   flexWrap: 'wrap',
+  justifyContent: 'center',
 })
 
 export const SkillItemStyled = styled('div', {

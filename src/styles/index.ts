@@ -33,4 +33,10 @@ export const {
       '2xl': '2rem',
     },
   },
+  media: {
+    xs: '(max-width: 639px)',
+    sm: '(min-width: 640px)',
+    md: '(min-width: 768px)',
+    bp3: '(min-width: 1024px)',
+  },
 })

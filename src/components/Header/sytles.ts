@@ -6,6 +6,10 @@ export const HeaderStyled = styled('header', {
   justifyContent: 'space-between',
   height: '7rem',
   borderBottom: '1px solid $gray600',
+
+  '@xs': {
+    display: 'none',
+  },
 })
 
 export const NavStyled = styled('nav', {

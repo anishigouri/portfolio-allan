@@ -15,12 +15,21 @@ export const ExperienceStyled = styled('div', {
   alignItems: 'flex-start',
   width: '100%',
   gap: '2rem',
+
+  '@xs': {
+    flexWrap: 'wrap',
+  },
 })
 
 export const ExperienceNavStyled = styled('ul', {
   display: 'flex',
   flexDirection: 'column',
   gap: '0.2rem',
+  alignItems: 'center',
+
+  '@xs': {
+    width: '100%',
+  },
 })
 
 export const ExperienceItemStyled = styled('li', {
@@ -44,12 +53,20 @@ export const ExperienceItemStyled = styled('li', {
   '&:hover': {
     background: '$blue600',
   },
+
+  '@xs': {
+    width: '90%',
+  },
 })
 
 export const ExperienceItemSelectedAnimateStyled = styled(motion.div, {
   display: 'flex',
   flexDirection: 'column',
   gap: '1rem',
+
+  '@xs': {
+    padding: '0 2rem',
+  },
 
   span: {
     lineHeight: '2rem',
