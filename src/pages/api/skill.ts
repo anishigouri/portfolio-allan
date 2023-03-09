@@ -49,7 +49,7 @@ export default function handler(
     },
     {
       description: 'Vuex',
-      icon: 'SiNuxtdotjs',
+      icon: 'SiVuedotjs',
     },
     {
       description: 'Material UI',
@@ -69,11 +69,7 @@ export default function handler(
     },
     {
       description: 'Sass',
-      icon: 'SiNuxtdotjs',
-    },
-    {
-      description: 'Design System',
-      icon: 'SiStorybook',
+      icon: 'SiSass',
     },
     {
       description: 'Storybook',

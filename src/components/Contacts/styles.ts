@@ -1,6 +1,7 @@
 import { styled } from '@/styles'
+import { motion } from 'framer-motion'
 
-export const ContactContainerStyled = styled('footer', {
+export const ContactContainerAnimateStyled = styled(motion.footer, {
   width: '100%',
   display: 'flex',
   alignItems: 'center',
@@ -9,7 +10,7 @@ export const ContactContainerStyled = styled('footer', {
   margin: '10rem 0',
 })
 
-export const ContactStyled = styled('div', {
+export const ContactStyled = styled(motion.div, {
   display: 'flex',
   alignItems: 'center',
   gap: '1rem',
@@ -27,6 +28,6 @@ export const ContactItemStyled = styled('a', {
 
   '&:hover': {
     cursor: 'pointer',
-    background: '$gray700',
+    background: '$blue600',
   },
 })

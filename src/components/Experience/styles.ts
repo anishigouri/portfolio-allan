@@ -1,6 +1,7 @@
 import { styled } from '@/styles'
+import { motion } from 'framer-motion'
 
-export const ExperienceContainerStyled = styled('section', {
+export const ExperienceContainerAnimateStyled = styled(motion.div, {
   width: '100%',
   display: 'flex',
   alignItems: 'center',
@@ -45,7 +46,7 @@ export const ExperienceItemStyled = styled('li', {
   },
 })
 
-export const ExperienceItemSelectedStyled = styled('div', {
+export const ExperienceItemSelectedAnimateStyled = styled(motion.div, {
   display: 'flex',
   flexDirection: 'column',
   gap: '1rem',

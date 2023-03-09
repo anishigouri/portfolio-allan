@@ -30,7 +30,7 @@ export default function handler(
       enterprise: {
         id: 1,
         name: 'KOIN',
-        logo: 'https://blog.koin.com.br/wp-content/uploads/2021/06/cropped-koin_Logo20RGB20bola20cinza20-20k20colorido__d8dac0432724463ca8bc096651c391b4.png',
+        logo: 'https://scontent.fssz1-1.fna.fbcdn.net/v/t1.6435-9/60349782_2250963901648010_7977561191478198272_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=KcmIFyaM8lkAX8OJiL1&_nc_ht=scontent.fssz1-1.fna&oh=00_AfBJgmbM25H2iwosppa67R3yEaiw1YYkmc8RJmydCPU3ug&oe=6431975E',
       },
     },
     {

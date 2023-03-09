@@ -1,55 +1,57 @@
 import { IProfile } from '@/types/profile'
+import { motion, Variants } from 'framer-motion'
 import Image from 'next/image'
-import { useState } from 'react'
-import { DescriptionStyled, ProfileStyled } from './styles'
-import { motion } from 'framer-motion'
+import { DescriptionAnimateStyled, ProfileAnimateStyled } from './styles'
 
 interface IProfileProps {
   profile: IProfile
 }
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
+const imageAnimate: Variants = {
+  offscreen: { x: -1000, opacity: 0 },
+  onscreen: {
+    x: 0,
     opacity: 1,
-    scale: 1,
     transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
+      type: 'spring',
+      bounce: 0.4,
+      duration: 1.5,
+      delay: 0,
     },
   },
 }
 
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
+const textAnimate: Variants = {
+  offscreen: { x: 1000, opacity: 0 },
+  onscreen: {
+    x: 0,
     opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 1.5,
+      delay: 0,
+    },
   },
 }
 
 export function Profile({ profile }: IProfileProps) {
-  const [age, setAge] = useState<number>(18)
   return (
-    <motion.div variants={container} initial="hidden" animate="visible">
-      <ProfileStyled id="aboutme">
-        <motion.div variants={item}>
-          <Image src={profile.avatarUrl} width={200} height={200} alt="Allan" />
-        </motion.div>
-        <DescriptionStyled>
-          <motion.div variants={item}>
-            <h1>{profile.name}</h1>
-          </motion.div>
-
-          <motion.div variants={item}>
-            <span>{profile.career}</span>
-          </motion.div>
-
-          <motion.div variants={item}>
-            <article>{profile.description}</article>
-          </motion.div>
-        </DescriptionStyled>
-      </ProfileStyled>
-    </motion.div>
+    <ProfileAnimateStyled
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: false }}
+      transition={{ staggerChildren: 0.5 }}
+      id="aboutme"
+    >
+      <motion.div variants={imageAnimate}>
+        <Image src={profile.avatarUrl} width={200} height={200} alt="Allan" />
+      </motion.div>
+      <DescriptionAnimateStyled variants={textAnimate}>
+        <h1>{profile.name}</h1>
+        <span>{profile.career}</span>
+        <article>{profile.description}</article>
+      </DescriptionAnimateStyled>
+    </ProfileAnimateStyled>
   )
 }

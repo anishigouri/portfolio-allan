@@ -1,6 +1,5 @@
 import { ISkill } from '@/pages/api/skill'
 import { motion, Variants } from 'framer-motion'
-import { useRef } from 'react'
 import * as ReactIcons from 'react-icons/si'
 import useSwr from 'swr'
 import {
@@ -17,13 +16,15 @@ type GetIconProps = {
 
 const skillVariants: Variants = {
   offscreen: {
-    y: 300,
+    x: 300,
+    opacity: 0,
   },
   onscreen: {
-    y: 50,
+    x: 0,
+    rotate: [180, 150, 120, 90, 60, 30, 0],
+    opacity: 1,
     transition: {
-      type: 'spring',
-      bounce: 0.4,
+      type: 'tween',
       duration: 0.6,
     },
   },
@@ -44,12 +45,11 @@ export function Skill() {
         {skills?.map((skill) => (
           <motion.div
             key={skill.description}
-            className="card-container"
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: true, amount: 0.8 }}
+            viewport={{ once: false, amount: 0.8 }}
           >
-            <motion.div className="card" variants={skillVariants}>
+            <motion.div variants={skillVariants}>
               <SkillItemStyled>
                 {getIcon({ icon: skill.icon })}
                 <span>{skill.description}</span>

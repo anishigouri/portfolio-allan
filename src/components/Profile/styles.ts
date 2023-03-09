@@ -1,6 +1,7 @@
 import { styled } from '@/styles'
+import { motion } from 'framer-motion'
 
-export const ProfileStyled = styled('main', {
+export const ProfileAnimateStyled = styled(motion.main, {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -14,7 +15,7 @@ export const ProfileStyled = styled('main', {
   },
 })
 
-export const DescriptionStyled = styled('section', {
+export const DescriptionAnimateStyled = styled(motion.section, {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',

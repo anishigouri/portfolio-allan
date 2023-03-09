@@ -1,18 +1,36 @@
+import { Variants, motion } from 'framer-motion'
+import { BsGithub, BsLinkedin, BsWhatsapp } from 'react-icons/bs'
+import { MdOutlineMailOutline } from 'react-icons/md'
 import {
-  ContactContainerStyled,
+  ContactContainerAnimateStyled,
   ContactItemStyled,
   ContactStyled,
 } from './styles'
-import { MdOutlineMailOutline } from 'react-icons/md'
-import { BsGithub, BsLinkedin, BsWhatsapp } from 'react-icons/bs'
-import { Variants, motion } from 'framer-motion'
+
+const contactTitleVariants: Variants = {
+  offscreen: {
+    x: 500,
+    opacity: 0,
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.3,
+      duration: 0.6,
+    },
+  },
+}
 
 const contactVariants: Variants = {
   offscreen: {
-    y: 300,
+    x: -500,
+    opacity: 0,
   },
   onscreen: {
-    y: 50,
+    x: 0,
+    opacity: 1,
     transition: {
       type: 'spring',
       bounce: 0.3,
@@ -23,43 +41,38 @@ const contactVariants: Variants = {
 
 export function Contact() {
   return (
-    <motion.div
+    <ContactContainerAnimateStyled
+      id="contact"
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
+      transition={{ staggerChildren: 0.5 }}
+      viewport={{ once: false, amount: 0.8 }}
     >
-      <ContactContainerStyled id="contact">
-        <motion.h1 variants={contactVariants}>Contatos</motion.h1>
-        <motion.div variants={contactVariants}>
-          <ContactStyled>
-            <ContactItemStyled href="mailto:allanfurlani@gmail.com">
-              <MdOutlineMailOutline size={40} />
-              <span>allanfurlani@gmail.com</span>
-            </ContactItemStyled>
-            <ContactItemStyled
-              href="https://wa.me/5511973505162"
-              target="_blank"
-            >
-              <BsWhatsapp size={40} />
-              <span>(11) 97350-5162</span>
-            </ContactItemStyled>
-            <ContactItemStyled
-              href="https://www.linkedin.com/in/allan-furlani-nishigouri-a5691533/"
-              target="_blank"
-            >
-              <BsLinkedin size={40} />
-              <span>@anishigouri</span>
-            </ContactItemStyled>
-            <ContactItemStyled
-              href="https://github.com/anishigouri"
-              target="_blank"
-            >
-              <BsGithub size={40} />
-              <span>@anishigouri</span>
-            </ContactItemStyled>
-          </ContactStyled>
-        </motion.div>
-      </ContactContainerStyled>
-    </motion.div>
+      <motion.h1 variants={contactTitleVariants}>Contatos</motion.h1>
+      <ContactStyled variants={contactVariants}>
+        <ContactItemStyled href="mailto:allanfurlani@gmail.com">
+          <MdOutlineMailOutline size={40} />
+          <span>allanfurlani@gmail.com</span>
+        </ContactItemStyled>
+        <ContactItemStyled href="https://wa.me/5511973505162" target="_blank">
+          <BsWhatsapp size={40} />
+          <span>(11) 97350-5162</span>
+        </ContactItemStyled>
+        <ContactItemStyled
+          href="https://www.linkedin.com/in/allan-furlani-nishigouri-a5691533/"
+          target="_blank"
+        >
+          <BsLinkedin size={40} />
+          <span>@anishigouri</span>
+        </ContactItemStyled>
+        <ContactItemStyled
+          href="https://github.com/anishigouri"
+          target="_blank"
+        >
+          <BsGithub size={40} />
+          <span>@anishigouri</span>
+        </ContactItemStyled>
+      </ContactStyled>
+    </ContactContainerAnimateStyled>
   )
 }
