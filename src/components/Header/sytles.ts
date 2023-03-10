@@ -1,40 +1,21 @@
 import { styled } from '@/styles'
+import { motion } from 'framer-motion'
 
-export const HeaderStyled = styled('header', {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  height: '7rem',
-  borderBottom: '1px solid $gray600',
+export const HeaderContainerStyled = styled('header', { height: '7rem' })
 
-  '@xs': {
-    display: 'none',
-  },
+export const NavAnimateStyled = styled(motion.nav, {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  bottom: 0,
+  width: '300px',
 })
 
-export const NavStyled = styled('nav', {
-  ul: {
-    display: 'flex',
-    gap: '1rem',
-    listStyleType: 'none',
-    fontSize: '$md',
-    color: '$gray100',
-
-    li: {
-      cursor: 'pointer',
-      borderBottom: '3px solid transparent',
-      borderRadius: '4px',
-
-      transition: '0.3s',
-      '&:hover': {
-        borderBottom: '3px solid $blue300',
-        color: '$gray300',
-      },
-
-      a: {
-        color: '#fff',
-        textDecoration: 'none',
-      },
-    },
-  },
+export const AnimateBackgroundStyled = styled(motion.div, {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  bottom: 0,
+  width: '300px',
+  background: '$gray600',
 })

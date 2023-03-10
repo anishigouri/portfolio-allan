@@ -16,7 +16,7 @@ export const ExperienceStyled = styled('div', {
   width: '100%',
   gap: '2rem',
 
-  '@xs': {
+  '@md': {
     flexWrap: 'wrap',
   },
 })
@@ -27,7 +27,7 @@ export const ExperienceNavStyled = styled('ul', {
   gap: '0.2rem',
   alignItems: 'center',
 
-  '@xs': {
+  '@md': {
     width: '100%',
   },
 })
@@ -54,7 +54,7 @@ export const ExperienceItemStyled = styled('li', {
     background: '$blue600',
   },
 
-  '@xs': {
+  '@md': {
     width: '90%',
   },
 })
@@ -64,7 +64,7 @@ export const ExperienceItemSelectedAnimateStyled = styled(motion.div, {
   flexDirection: 'column',
   gap: '1rem',
 
-  '@xs': {
+  '@md': {
     padding: '0 2rem',
   },
 

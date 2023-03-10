@@ -34,9 +34,10 @@ export const {
     },
   },
   media: {
-    xs: '(max-width: 639px)',
-    sm: '(min-width: 640px)',
-    md: '(min-width: 768px)',
-    bp3: '(min-width: 1024px)',
+    xs: '(max-width: 575px)',
+    sm: '(max-width: 576px)',
+    md: '(max-width: 768px)',
+    lg: '(max-width: 992px)',
+    xl: '(min-width: 1140px)',
   },
 })
