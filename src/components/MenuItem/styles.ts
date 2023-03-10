@@ -2,11 +2,11 @@ import { styled } from '@/styles'
 import { motion } from 'framer-motion'
 
 export const MenuItemAnimateStyled = styled(motion.a, {
-  listStyle: 'none',
   marginBottom: '3rem',
-  display: 'flex',
   alignItems: 'center',
   cursor: 'pointer',
+  display: 'flex',
+  gap: '1rem',
 
   span: {
     fontWeight: 600,

@@ -1,4 +1,6 @@
+import { BsBuilding, BsPerson } from 'react-icons/bs'
 import { GiSkills } from 'react-icons/gi'
+import { MdOutlineContactPhone } from 'react-icons/md'
 import { MenuItem } from '../MenuItem'
 import { NavigationAnimateStyled } from './styles'
 
@@ -19,25 +21,25 @@ export const Navigation = ({ onClose }: IProps) => (
   <NavigationAnimateStyled variants={variants}>
     <MenuItem
       onClose={onClose}
-      icon={<GiSkills />}
+      icon={<BsPerson size={30} />}
       href="#aboutme"
       text="Sobre mim"
     />
     <MenuItem
       onClose={onClose}
-      icon={<GiSkills />}
+      icon={<GiSkills size={30} />}
       href="#skills"
       text="Habilidades"
     />
     <MenuItem
       onClose={onClose}
-      icon={<GiSkills />}
+      icon={<BsBuilding size={30} />}
       href="#experience"
       text="Experiências"
     />
     <MenuItem
       onClose={onClose}
-      icon={<GiSkills />}
+      icon={<MdOutlineContactPhone size={30} />}
       href="#contact"
       text="Contatos"
     />
