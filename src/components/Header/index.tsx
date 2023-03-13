@@ -3,10 +3,12 @@ import { useCycle } from 'framer-motion'
 import { useRef } from 'react'
 import { MenuToggle } from '../MenuToggle'
 import { Navigation } from '../Navigation'
+import { RadioButton } from '../RadioButton'
 import {
   AnimateBackgroundStyled,
   HeaderContainerStyled,
   NavAnimateStyled,
+  RadionButtonContainerStyled,
 } from './sytles'
 
 const sidebar = {
@@ -46,6 +48,9 @@ export function Header() {
         <Navigation onClose={() => toggleOpen()} />
         <MenuToggle toggle={() => toggleOpen()} />
       </NavAnimateStyled>
+      <RadionButtonContainerStyled>
+        <RadioButton />
+      </RadionButtonContainerStyled>
     </HeaderContainerStyled>
   )
 }
