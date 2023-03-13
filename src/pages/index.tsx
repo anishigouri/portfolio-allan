@@ -2,6 +2,7 @@ import { Contact } from '@/components/Contacts'
 import { Experience } from '@/components/Experience'
 import { Header } from '@/components/Header'
 import { Profile } from '@/components/Profile'
+import { ScrollButton } from '@/components/ScrollButton'
 import { Skill } from '@/components/Skill'
 import { api } from '@/lib/axios'
 import { IProfile } from '@/types/profile'
@@ -27,6 +28,7 @@ export default function Home({ profile }: IHomeProps) {
       <Skill />
       <Experience />
       <Contact />
+      <ScrollButton />
     </>
   )
 }

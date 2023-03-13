@@ -4,11 +4,8 @@ import { motion } from 'framer-motion'
 export const MenuToggleContainerStyled = styled(motion.button, {
   outline: 'none',
   border: 'none',
-  // -webkit-user-select: none;
-  // -moz-user-select: none;
-  // -ms-user-select: none;
   cursor: 'pointer',
-  position: 'absolute',
+  position: 'fixed',
   top: '16px',
   left: '15px',
   width: '50px',

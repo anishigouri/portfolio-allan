@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 export const HeaderContainerStyled = styled('header', { height: '7rem' })
 
 export const NavAnimateStyled = styled(motion.nav, {
-  position: 'absolute',
+  position: 'fixed',
   top: 0,
   left: 0,
   bottom: 0,
@@ -12,7 +12,7 @@ export const NavAnimateStyled = styled(motion.nav, {
 })
 
 export const AnimateBackgroundStyled = styled(motion.div, {
-  position: 'absolute',
+  position: 'fixed',
   top: 0,
   left: 0,
   bottom: 0,

@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, FormEvent, ReactNode } from 'react'
+import { useEffect, FormEvent, ReactNode } from 'react'
 import { MenuItemAnimateStyled } from './styles'
 
 const variants = {
@@ -28,9 +28,11 @@ interface IProps {
 export const MenuItem = ({ icon, text, href, onClose }: IProps) => {
   function onSelectItem(e: FormEvent<HTMLAnchorElement>, href: string) {
     e.preventDefault()
+    e.stopPropagation()
     onClose()
-    setInterval(() => {
+    const interval = setInterval(() => {
       window.location.href = href
+      clearInterval(interval)
     }, 1000)
   }
 
