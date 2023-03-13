@@ -1,18 +1,17 @@
-import { useEffect, useState } from 'react'
-import { ButtonContainerStyled } from './styles'
-import { IoIosArrowDropup } from 'react-icons/io'
 import { Variants } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { IoIosArrowDropup } from 'react-icons/io'
+import { ButtonContainerStyled } from './styles'
 
 const variants: Variants = {
   hidden: {
     opacity: 0,
-    rotate: [0, 90, 180, 270, 360],
+    rotate: [0, 360],
     transition: { type: 'spring', delay: 0.2 },
   },
   visible: {
     opacity: 1,
     transition: { type: 'spring', delay: 0.2 },
-    rotate: 0,
   },
 }
 
@@ -48,7 +47,6 @@ export function ScrollButton() {
       variants={variants}
       initial="hidden"
       animate={visible ? 'visible' : 'hidden'}
-      exit="hidden"
     >
       <IoIosArrowDropup size={50} />
     </ButtonContainerStyled>
