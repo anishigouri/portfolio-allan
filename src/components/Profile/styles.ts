@@ -26,7 +26,7 @@ export const DescriptionAnimateStyled = styled(motion.section, {
   span: {
     fontWeight: '400',
     borderBottom: '3px solid $blue300',
-    textTransform: 'uppercase',
+    // textTransform: 'uppercase',
   },
 
   article: {

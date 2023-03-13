@@ -5,17 +5,10 @@ export const ButtonContainerStyled = styled(motion.button, {
   position: 'fixed',
   background: '$gray700',
   border: 'none',
-  borderRadius: 8,
+  borderRadius: '8px !important',
   bottom: '2rem',
   right: '2rem',
   cursor: 'pointer',
   color: '$gray300',
-  padding: '1rem',
-  variants: {
-    hidden: {
-      true: {
-        display: 'none',
-      },
-    },
-  },
+  padding: '0.5rem',
 })

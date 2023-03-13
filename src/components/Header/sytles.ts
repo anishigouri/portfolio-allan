@@ -9,6 +9,7 @@ export const NavAnimateStyled = styled(motion.nav, {
   left: 0,
   bottom: 0,
   width: '300px',
+  zIndex: 1,
 })
 
 export const AnimateBackgroundStyled = styled(motion.div, {
@@ -18,4 +19,5 @@ export const AnimateBackgroundStyled = styled(motion.div, {
   bottom: 0,
   width: '300px',
   background: '$gray600',
+  zIndex: 1,
 })

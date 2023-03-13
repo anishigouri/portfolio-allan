@@ -14,6 +14,7 @@ export const globalStyles = globalCss({
     color: '$gray100',
     maxWidth: '74rem',
     margin: '0 auto',
+    overflowX: 'hidden',
   },
 
   'body, input, textarea, button': {
