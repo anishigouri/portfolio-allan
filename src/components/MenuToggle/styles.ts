@@ -6,7 +6,7 @@ export const MenuToggleContainerStyled = styled(motion.button, {
   border: 'none',
   cursor: 'pointer',
   position: 'fixed',
-  top: '16px',
+  top: '18px',
   left: '15px',
   width: '50px',
   height: '50px',
