@@ -15,33 +15,36 @@ const variants = {
 
 interface IProps {
   onClose: () => void
+  isOpen: 'open' | 'closed'
 }
 
-export const Navigation = ({ onClose }: IProps) => (
-  <NavigationAnimateStyled variants={variants}>
-    <MenuItem
-      onClose={onClose}
-      icon={<BsPerson size={30} />}
-      href="#aboutme"
-      text="Sobre mim"
-    />
-    <MenuItem
-      onClose={onClose}
-      icon={<GiSkills size={30} />}
-      href="#skills"
-      text="Habilidades"
-    />
-    <MenuItem
-      onClose={onClose}
-      icon={<BsBuilding size={30} />}
-      href="#experience"
-      text="Experiências"
-    />
-    <MenuItem
-      onClose={onClose}
-      icon={<MdOutlineContactPhone size={30} />}
-      href="#contact"
-      text="Contatos"
-    />
-  </NavigationAnimateStyled>
-)
+export function Navigation({ onClose, isOpen }: IProps) {
+  return (
+    <NavigationAnimateStyled variants={variants} isOpen={isOpen}>
+      <MenuItem
+        onClose={onClose}
+        icon={<BsPerson size={30} />}
+        href="#aboutme"
+        text="Sobre mim"
+      />
+      <MenuItem
+        onClose={onClose}
+        icon={<GiSkills size={30} />}
+        href="#skills"
+        text="Habilidades"
+      />
+      <MenuItem
+        onClose={onClose}
+        icon={<BsBuilding size={30} />}
+        href="#experience"
+        text="Experiências"
+      />
+      <MenuItem
+        onClose={onClose}
+        icon={<MdOutlineContactPhone size={30} />}
+        href="#contact"
+        text="Contatos"
+      />
+    </NavigationAnimateStyled>
+  )
+}

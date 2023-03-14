@@ -9,6 +9,7 @@ export const RadionButtonStyled = styled('div', {
   borderRadius: '50px',
   padding: '10px',
   cursor: 'pointer',
+  overflow: 'hidden',
 
   variants: {
     isOn: {

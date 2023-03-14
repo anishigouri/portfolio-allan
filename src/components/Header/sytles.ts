@@ -1,7 +1,9 @@
 import { styled } from '@/styles'
 import { motion } from 'framer-motion'
 
-export const HeaderContainerStyled = styled('header', {})
+export const HeaderContainerStyled = styled('header', {
+  height: '5rem',
+})
 
 export const NavAnimateStyled = styled(motion.nav, {
   position: 'fixed',

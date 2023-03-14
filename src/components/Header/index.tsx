@@ -52,7 +52,10 @@ export function Header() {
         ref={containerRef}
       >
         <AnimateBackgroundStyled variants={sidebar} />
-        <Navigation onClose={() => toggleOpen()} />
+        <Navigation
+          isOpen={isOpen ? 'open' : 'closed'}
+          onClose={() => toggleOpen()}
+        />
         <MenuToggle toggle={() => toggleOpen()} />
       </NavAnimateStyled>
       <RadionButtonContainerStyled>

@@ -7,4 +7,15 @@ export const NavigationAnimateStyled = styled(motion.ul, {
   top: '100px',
   width: '230px',
   zIndex: 2,
+
+  variants: {
+    isOpen: {
+      open: {
+        display: 'block',
+      },
+      closed: {
+        display: 'none',
+      },
+    },
+  },
 })

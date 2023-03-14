@@ -1,12 +1,25 @@
 import { motion } from 'framer-motion'
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 import { MenuToggleContainerStyled } from './styles'
 
 function Path(props: any) {
+  const [mounted, setMounted] = useState<boolean>(false)
+  const { theme, setTheme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return <></>
+  }
+
   return (
     <motion.path
       fill="transparent"
       strokeWidth="3"
-      stroke={'#E1E1E6'}
+      stroke={theme === 'dark' ? '#E1E1E6' : '#202024'}
       strokeLinecap="round"
       {...props}
     />
