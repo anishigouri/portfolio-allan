@@ -6,8 +6,8 @@ export const ExperienceContainerAnimateStyled = styled(motion.div, {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column',
-  gap: '8rem',
-  margin: '10rem 0',
+  gap: '3rem',
+  margin: '8rem 0 5rem 0',
 })
 
 export const ExperienceStyled = styled('div', {

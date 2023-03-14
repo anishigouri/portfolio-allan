@@ -6,6 +6,9 @@ export const globalStyles = globalCss({
     padding: 0,
     boxSizing: 'border-box',
     scrollBehavior: 'smooth',
+  },
+
+  html: {
     overflowX: 'hidden',
   },
 
@@ -15,6 +18,7 @@ export const globalStyles = globalCss({
     color: '$text',
     maxWidth: '74rem',
     margin: '0 auto',
+    overflowX: 'hidden',
   },
 
   'body, input, textarea, button': {

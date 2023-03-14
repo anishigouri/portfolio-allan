@@ -6,8 +6,8 @@ export const ContactContainerAnimateStyled = styled(motion.footer, {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column',
-  gap: '8rem',
-  margin: '10rem 0',
+  gap: '3rem',
+  margin: '5rem 0',
 })
 
 export const ContactStyled = styled(motion.div, {
