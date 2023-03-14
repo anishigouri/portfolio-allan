@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { HandleStyled, RadionButtonStyled } from './styles'
 
 const spring = {
@@ -7,15 +6,14 @@ const spring = {
   damping: 30,
 }
 
-export function RadioButton() {
-  const [isOn, setIsOn] = useState<boolean>(false)
+interface IProps {
+  value: boolean
+  onChange: (value: boolean) => void
+}
 
-  function toggleSwitch() {
-    setIsOn(!isOn)
-  }
-
+export function RadioButton({ onChange, value = false }: IProps) {
   return (
-    <RadionButtonStyled isOn={isOn} onClick={toggleSwitch}>
+    <RadionButtonStyled isOn={value} onClick={() => onChange(!value)}>
       <HandleStyled transition={spring} layout />
     </RadionButtonStyled>
   )

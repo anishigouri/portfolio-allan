@@ -31,7 +31,8 @@ export const SkillItemStyled = styled('div', {
   flexDirection: 'column',
   gap: '2rem',
   alignItems: 'center',
-  background: '$gray700',
+  background: '$backgroundComponent',
+  color: '$text',
   borderRadius: 8,
   borderBottom: '5px solid $blue300',
 })

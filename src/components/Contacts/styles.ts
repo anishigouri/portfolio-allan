@@ -28,7 +28,7 @@ export const ContactItemStyled = styled('a', {
   padding: '1rem',
   borderRadius: 8,
   transition: '0.3s',
-  color: '#fff',
+  color: '$text',
   width: '100%',
 
   span: {

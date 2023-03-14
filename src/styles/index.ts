@@ -24,6 +24,10 @@ export const {
       blue200: '#42a5f5',
       blue300: '#1e88e5',
       blue600: '#2979ff',
+
+      text: '$gray100',
+      background: '$gray900',
+      backgroundComponent: '$gray600',
     },
 
     fontSizes: {
@@ -39,5 +43,13 @@ export const {
     md: '(max-width: 768px)',
     lg: '(max-width: 992px)',
     xl: '(min-width: 1140px)',
+  },
+})
+
+export const lightTheme = createTheme({
+  colors: {
+    text: '$gray800',
+    background: '$gray100',
+    backgroundComponent: '$gray300',
   },
 })

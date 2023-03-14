@@ -18,12 +18,12 @@ export const AnimateBackgroundStyled = styled(motion.div, {
   left: 0,
   bottom: 0,
   width: '300px',
-  background: '$gray600',
+  background: '$backgroundComponent',
   zIndex: 1,
 })
 
 export const RadionButtonContainerStyled = styled('div', {
-  position: 'fixed',
+  position: 'absolute',
   top: '1rem',
   right: '1rem',
 })

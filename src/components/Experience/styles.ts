@@ -37,7 +37,7 @@ export const ExperienceItemStyled = styled('li', {
   padding: '1.5rem 1rem',
   width: '15rem',
   cursor: 'pointer',
-  background: '$gray800',
+  background: '$backgroundComponent',
   borderRadius: 8,
 
   variants: {

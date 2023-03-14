@@ -1,6 +1,7 @@
 import { useDimensions } from '@/hooks/useDimensions'
 import { useCycle } from 'framer-motion'
-import { useRef } from 'react'
+import { useTheme } from 'next-themes'
+import { useEffect, useRef, useState } from 'react'
 import { MenuToggle } from '../MenuToggle'
 import { Navigation } from '../Navigation'
 import { RadioButton } from '../RadioButton'
@@ -35,6 +36,12 @@ export function Header() {
   const [isOpen, toggleOpen] = useCycle(false, true)
   const containerRef = useRef(null)
   const { height } = useDimensions(containerRef)
+  const [mounted, setMounted] = useState<boolean>(false)
+  const { theme, setTheme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <HeaderContainerStyled>
@@ -49,7 +56,14 @@ export function Header() {
         <MenuToggle toggle={() => toggleOpen()} />
       </NavAnimateStyled>
       <RadionButtonContainerStyled>
-        <RadioButton />
+        {mounted && (
+          <RadioButton
+            value={theme === 'dark'}
+            onChange={(newTheme: boolean) =>
+              setTheme(newTheme ? 'dark' : 'light')
+            }
+          />
+        )}
       </RadionButtonContainerStyled>
     </HeaderContainerStyled>
   )

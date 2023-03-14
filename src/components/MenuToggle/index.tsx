@@ -1,15 +1,17 @@
 import { motion } from 'framer-motion'
 import { MenuToggleContainerStyled } from './styles'
 
-const Path = (props: any) => (
-  <motion.path
-    fill="transparent"
-    strokeWidth="3"
-    stroke="#fff"
-    strokeLinecap="round"
-    {...props}
-  />
-)
+function Path(props: any) {
+  return (
+    <motion.path
+      fill="transparent"
+      strokeWidth="3"
+      stroke={'#E1E1E6'}
+      strokeLinecap="round"
+      {...props}
+    />
+  )
+}
 
 export const MenuToggle = ({ toggle }: any) => (
   <MenuToggleContainerStyled onClick={toggle}>
